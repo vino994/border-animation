@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    background-color: black;
+}
+section{
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box{
+    width: 300px;
+    height: 350px;
+    background-color: #242424;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+.box:before{
+    content: '';
+    position: absolute;
+    width: 90%;
+    height: 130%;
+    background:linear-gradient(to top  , hsl(210, 79%, 41%) 50%,#00ffcc 30% , hwb(116 0% 0%) 20%);
+    transform: rotate(45deg)
+   
+}
+.box:hover::before{
+ animation: rotate 5s linear infinite;
+}
+.box:after{
+    content: 'OnlineCoders';
+    position: absolute;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    letter-spacing: 5px;
+    width: 97%;
+    height: 97%;
+    background-color: #242424;
+    
+
+}
+@keyframes rotate{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
